@@ -1,7 +1,7 @@
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        queue<Integer> q = new queue<Integer>();
+        queue<Integer> q = new queue<>();
         q.enqueue(1);
         q.enqueue(2);
         q.enqueue(434121);
@@ -14,19 +14,7 @@ public class Main {
 class queue<T> {
     int front = -1;
     int back = -1;
-    ArrayList<T> list = new ArrayList<T>();
-    T front(){
-        if(front == -1) {
-            return null;
-        }
-        return list.get(front);
-    }
-    T back(){
-        if(back == -1) {
-            return null;
-        }
-        return list.get(back);
-    }
+    ArrayList<T> list = new ArrayList<>();
     void enqueue(T X) {
         if(this.isEmpty()) {
             front = 0;
